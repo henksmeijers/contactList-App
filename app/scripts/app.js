@@ -25,7 +25,7 @@ angular.module('contactApp', ['ui.router','ngResource'])
 
 
             // route for the menu page
-            .state('app.menu', {
+            .state('app.contact', {
                 url: 'contact',
                 views: {
                     'content@': {
