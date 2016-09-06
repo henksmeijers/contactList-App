@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row row-content" ng-controller="contactsController">
+
+
+        <div class="col-xs-3 col-xs-offset-1">
+          <h4>Contacts</h4>
+        </div>
+
+        <div class="col-xs-6" style="margin-top: 5px">
+          <label for="order" style="color: silver">
+          Sort by:
+          </label>
+          <input type="text" id="order" placeholder="rating" ng-model="ord">
+        </div>
+
+        <div class="col-xs-9 col-xs-offset-1">
+          <ul class="list-unstyled">
+            <li ng-repeat="com in dish.comments | orderBy: ord">
+              <blockquote>
+                <h5>{{contact.firstName}} Stars</h5>
+                <h5>{{contact.lastName}}</h5>
+              </blockquote>
+              <div class="control-group">
+                <div class="controls">
+                  <!-- edit -->
+                    <a ng-click="deleteContact()" class="btn btn-small">delete</a>
+                    <a ng-click="updateContact()" class="btn btn-small btn-primary"> update user</a>
+                    <div class="col-xs-12" ng-if="showForm">
+                      <form class="form-horizontal" name="commentForm"
+                          ng-submit="submitContacts()">
+                        <div class="form-group">
+                              <label for="firstName" class="col-sm-3 control-label">First Name</label>
+                              <div class="col-sm-9">
+                                  <input type="text" class="form-control"
+                                  id="firstName" name="firstName"
+                                  placeholder="Enter First Name"
+                                  ng-model="myContacts.firstName" required/>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                                <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control"
+                                    id="lastName" name="lastName"
+                                    placeholder="Enter Last Name"
+                                    ng-model="myContacts.lasttName" required/>
+                                </div>
+                            </div>
+                      </form>
+                    </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+        <form class="form-horizontal" name="commentForm"
+            ng-submit="submitContacts()">
+          <div class="form-group">
+                <label for="firstName" class="col-sm-3 control-label">First Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control"
+                    id="firstName" name="firstName"
+                    placeholder="Enter First Name"
+                    ng-model="myContacts.firstName" required/>
+                </div>
+            </div>
+            <div class="form-group">
+                  <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control"
+                      id="lastName" name="lastName"
+                      placeholder="Enter Last Name"
+                      ng-model="myContacts.lasttName" required/>
+                  </div>
+              </div>
+        </form>
+
+
+    </div>
+</div>

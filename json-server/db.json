@@ -1,0 +1,24 @@
+{
+  "dishes": [
+    {
+      "id": 0,
+      "firstName": "Mikias",
+      "lastName": "Haile"
+    },
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Max"
+    },
+    {
+      "id": 2,
+      "firstName": "James",
+      "lastName": "Macchony"
+    },
+    {
+      "id": 3,
+      "firstName": "Tony",
+      "lastName": "Antonen"
+    }
+  ]
+}
